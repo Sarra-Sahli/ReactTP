@@ -1,10 +1,29 @@
-export default function Hello() {
-    return (<> 
-       <h1> Hello Sarah </h1>        
-    </>);
-}
- 
+import { Component } from "react";
+import { Button } from "react-bootstrap"; // Ajoutez l'import de Button si nécessaire
 
+class Hello extends Component {
+     state = {  monText:"hello you",value:0} 
+     //evenement de bouton que ce il fait exctement
+handleClick=()=>
+{
+    this.setState({
+        value:this.state.value+1
+    })
+}
+     render() { 
+        return (<>    
+        {this.state.monTexte}
+        {this.state.value}
+        Ceci un composant de classe
+  
+        <Button variant="primary" onClick={this.handleClick}>Incrémenter</Button>
+  
+        <h2>{this.state.value}</h2>
+  
+        </>);
+  
+    }
+}
 // import { Component } from "react";
 
 // class Hello extends Component {
@@ -18,4 +37,4 @@ export default function Hello() {
 //     }
 // }
  
-// export default Hello;
+ export default Hello;

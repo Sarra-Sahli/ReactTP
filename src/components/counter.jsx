@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
-import './style.css'; // Importez le fichier CSS
-
+import './style.css'; 
 
 function Counter({ initialCount = 0, step = 1 }) {
   const [count, setCount] = useState(initialCount);
 
-  // Fonction pour incrémenter le compteur
   const increment = () => {
     setCount(count + step);
   };
 
-  // Fonction pour décrémenter le compteur
   const decrement = () => {
     setCount(count - step);
   };
   const reset= ()=>
   {
-    setCount(0)
+    setCount(initialCount)
   }
-
   return (
     <div>
       <h2>Compteur : {count}</h2>
