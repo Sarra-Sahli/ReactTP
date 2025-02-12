@@ -5,7 +5,7 @@
       "img": "event1.jpg",
       "price": 30,
       "nbTickets": 10,
-      "nbParticipants": 10,
+      "nbParticipants": 8,
       "like": false
     },
     {
@@ -14,7 +14,7 @@
       "img": "event2.jpg",
       "price": 15,
       "nbTickets": 4,
-      "nbParticipants": 30,
+      "nbParticipants": 3,
       "like": false
     },
     {
