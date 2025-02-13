@@ -8,12 +8,13 @@ import Counter  from './components/counter';
 import ComFct from "./components/ComFct";
 import Event from "./components/Event"
 import Events from './components/Events';
+import Products from './components/products';
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-    <Events />
+    <Products />
 
     </>
   );

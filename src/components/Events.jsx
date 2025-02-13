@@ -23,7 +23,8 @@ function Events() {
       )
     );
 
-    setMessage("You have booked an event");
+    set
+    ("You have booked an event");
 
     setTimeout(() => {
       setMessage("");
