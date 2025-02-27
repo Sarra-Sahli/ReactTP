@@ -1,22 +1,32 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { Suspense, useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Hello from './components/Hello';
-import Form from './components/Form'; // Importez Form depuis le bon chemin
-import Counter  from './components/counter';
-import ComFct from "./components/ComFct";
-import Event from "./components/Event"
+import Form from './components/Form';
+import Counter from './components/Counter';
+import ComFct from './components/ComFct';
+import Event from './components/Event';
 import Events from './components/Events';
-import Products from './components/products';
+import Products from './components/Products';
+
+const NotFound = React.lazy(() => import("./components/NotFound"));
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-    <Products />
+    <Suspense fallback={<div>Loading ...</div>}>
+      <nav>
+        <Link to="/hello">Home</Link>
+      </nav>
 
-    </>
+      <Routes>
+        <Route path="/hello" element={<Hello />} />
+        <Route path="/events" element={<Events />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 
