@@ -1,0 +1,84 @@
+/* Conteneur principal */
+.events-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Formulaire */
+  .event-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-form input,
+  .event-form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .event-form input[type="text"],
+  .event-form input[type="number"],
+  .event-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .event-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .event-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Liste des événements */
+  .events-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card h3 {
+    margin-top: 0;
+  }
+  
+  .event-actions button {
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .event-actions button:hover {
+    background-color: #218838;
+  }
+  
+  .event-actions button:last-child {
+    background-color: #dc3545;
+  }
+  
+  .event-actions button:last-child:hover {
+    background-color: #c82333;
+  }

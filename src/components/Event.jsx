@@ -1,8 +1,19 @@
 import { Card, Button } from "react-bootstrap";
+import useFavoriteStore from "../ZultanStore/useFavoriteStore";
 
-function Event({ name, description, img, price, nbTickets, nbParticipants, buy, like, toggleLike }) {
+function Event({ id, name, description, img, price, nbTickets, nbParticipants, buy, like, toggleLike }) {
+  const { addToFavorites, removeFromFavorites } = useFavoriteStore();
   const placesRestantes = nbTickets - nbParticipants;
   const isSoldOut = placesRestantes === 0;
+
+  const handleToggleLike = () => {
+    if (like) {
+      removeFromFavorites(id);
+    } else {
+      addToFavorites({ id, name, description, img, price, nbTickets, nbParticipants });
+    }
+    toggleLike();
+  };
 
   return (
     <Card style={{ width: "18rem" }}>
@@ -20,7 +31,7 @@ function Event({ name, description, img, price, nbTickets, nbParticipants, buy, 
           {isSoldOut ? "Sold Out" : "Book an event"}
         </Button>{" "}
 
-        <Button variant={like ? "danger" : "success"} onClick={toggleLike}>
+        <Button variant={like ? "danger" : "success"} onClick={handleToggleLike}>
           {like ? "Dislike" : "Like"}
         </Button>
       </Card.Body>
